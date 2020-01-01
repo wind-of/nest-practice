@@ -1,8 +1,8 @@
 {
   "name": "project",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Nest-js project for practise",
+  "author": "wind-of",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
