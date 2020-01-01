@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cat.dto'
-import { Cat } from './interfaces/cat.interface'
+import { ICat } from './interfaces/cat.interface'
 
 @Injectable()
 export class CatsService {
-  private readonly cats: Cat[] = [
+  private readonly cats: ICat[] = [
     {
       name: "Boris",
       age: 15,
@@ -12,15 +12,15 @@ export class CatsService {
     }
   ];
 
-  findAll(): Cat[] {
-    return this.cats
+  findAll(): ICat[] {
+    return this.cats;
   }
 
-  findOne(id: number): Cat | string{
+  findOne(id: number): ICat | string{
     return this.cats[id] || `There are no cat by id ${id}`;
   }
 
-  createCat(cat: Cat) {
+  createCat(cat: ICat) {
     this.cats.push(cat);
   }
 }
