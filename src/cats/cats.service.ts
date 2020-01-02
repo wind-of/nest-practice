@@ -8,7 +8,8 @@ export class CatsService {
     {
       name: "Boris",
       age: 15,
-      mass: 9
+      mass: 9,
+      breed: 'Poroda'
     }
   ];
 
@@ -20,7 +21,15 @@ export class CatsService {
     return this.cats[id] || `There are no cat by id ${id}`;
   }
 
-  createCat(cat: ICat) {
-    this.cats.push(cat);
+  create(cat: ICat) {
+    return this.cats.push(cat);
+  }
+
+  update(cat: ICat): string {
+    return `YES, YES, YES, YES, YES`
+  }
+
+  delete(id: number): string {
+    return `NO, NO, NO, NO, NO`
   }
 }
