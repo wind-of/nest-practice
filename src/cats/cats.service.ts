@@ -22,7 +22,7 @@ export class CatsService {
     return this.cats[id] || `There are no cat by id ${id}`;
   }
 
-  create(cat: ICat) {
+  create(cat: ICat): number {
     return this.cats.push(cat);
   }
 
