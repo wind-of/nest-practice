@@ -12,11 +12,6 @@ export class CatsController {
   createCat(@Body() createCatDto: CreateCatDto) {
     return this.catsService.create(createCatDto);
   }
-  
-  @Put()
-  updateCat(@Body() updateCatDto: UpdateCatDto) {
-    return this.catsService.update(updateCatDto);
-  }
 
   @Get()
   findALl(): ICat[] {
@@ -26,6 +21,11 @@ export class CatsController {
   @Get(':id')
   findOne(@Param() params): ICat | string {
     return this.catsService.findOne(params.id);
+  }
+
+  @Put(':id')
+  updateCat(@Body() updateCatDto: UpdateCatDto, @Param() params) {
+    return this.catsService.update(updateCatDto, params.id);
   }
 
   @Delete(':id')

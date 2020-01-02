@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCatDto } from './dto/create-cat.dto'
 import { ICat } from './interfaces/cat.interface'
+import { UpdateCatDto } from './dto/update-cat.dto';
 
 @Injectable()
 export class CatsService {
@@ -25,8 +26,8 @@ export class CatsService {
     return this.cats.push(cat);
   }
 
-  update(cat: ICat): string {
-    return `YES, YES, YES, YES, YES`
+  update(newCat: UpdateCatDto, id: number): string {
+    return `YES, YES, YES, YES, YES, the cat tou wanted to update was ${this.cats[id].name}`
   }
 
   delete(id: number): string {
