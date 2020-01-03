@@ -1,8 +1,8 @@
-import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes } from '@nestjs/common';
-import { CatsService } from './cats.service';
+import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes } from '@nestjs/common'
+import { CatsService } from './cats.service'
 import { ICat } from './interfaces/cat.interface'
 import { CreateCatDto } from './dto/create-cat.dto'
-import { UpdateCatDto } from './dto/update-cat.dto';
+import { UpdateCatDto } from './dto/update-cat.dto'
 import { JoiValidationPipe } from 'src/pipes/validation.pipe'
 import { createCatSchema } from 'src/cats/schemas/joi.cats.schema'
 
