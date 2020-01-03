@@ -9,7 +9,6 @@ export class CatsService {
     {
       name: "Boris",
       age: 15,
-      mass: 9,
       breed: 'Poroda'
     }
   ];
