@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes } from '@nestjs/common'
+import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes, ValidationPipe } from '@nestjs/common'
 import { CatsService } from './cats.service'
 import { ICat } from './interfaces/cat.interface'
 import { CreateCatDto } from './dto/create-cat.dto'
@@ -11,7 +11,8 @@ export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
   @Post()
-  // @UsePipes(new JoiValidationPipe(createCatSchema))
+  // @UsePipes(JoiValidationPipe(createCatSchema))
+  @UsePipes(ValidationPipe)
   createCat(@Body() createCatDto: CreateCatDto) {
     return this.catsService.create(createCatDto);
   }
