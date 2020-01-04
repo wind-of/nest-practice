@@ -2,7 +2,7 @@ import { Controller, Get, Post, UseFilters, HttpException } from '@nestjs/common
 import { CustomException } from './exceptions/custom.exception'
 import { HttpExceptionFilter } from './filters/http-exception.filter'
 
-@Controller() // means that the controller that uses this decorator is the main
+@Controller()
 
 // You can register filter before exporting controllers and it will be controller-scoped
 // @UseFilters(HttpExceptionFilter) 
