@@ -13,6 +13,9 @@ async function bootstrap() {
   // for every route handler
   // app.useGlobalFilters(new HttpExceptionFilter());
 
+  // If you want to register a pipe globally 
+  // app.useGlobalPipes(new PipeName());
+
   // Another way to register a filter globally can be seen in the file app.module.ts
   // The difference between these two methods is that
   // in the first approach (see above), the filter cannot inject dependencies

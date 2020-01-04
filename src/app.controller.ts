@@ -6,6 +6,8 @@ import { HttpExceptionFilter } from './filters/http-exception.filter'
 
 // You can register filter before exporting controllers and it will be controller-scoped
 // @UseFilters(HttpExceptionFilter) 
+// ...also and pipes
+// @UsePipes(PipeName) 
 
 export class AppController {
   @Get()

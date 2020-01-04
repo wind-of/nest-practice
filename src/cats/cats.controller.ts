@@ -11,6 +11,11 @@ export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
   @Post()
+  // Pipes, similar to exception filters, can be 
+  // method-scoped, controller-scoped and global-scoped,
+  // But the difference between them is that pipes can also be param-scoped (see below)
+  // createCat(@Body(ValidationPipe) createCatDto: CreateCatDto)
+  
   // @UsePipes(JoiValidationPipe(createCatSchema))
   @UsePipes(ValidationPipe)
   createCat(@Body() createCatDto: CreateCatDto) {
