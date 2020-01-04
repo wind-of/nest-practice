@@ -15,11 +15,11 @@ export class AppModule implements NestModule {
       .apply(CatsMiddleware)
 
       // .exclude({path: cats, method: ...})
-      // You can also expclude an entire controller, like...
+      // You can also exclude an entire controller (see the next line)
       // .exclude(CatsController)
 
       .forRoutes({path: 'cats', method: RequestMethod.GET})
-      // ...or define middleware for all the routes defined in the controller
+      // ...or define middleware for an entire controller (see the next line)
       // .forRoutes(CatsController)
   }
 }

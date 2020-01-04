@@ -6,12 +6,16 @@ import { plainToClass } from 'class-transformer';
 export class ValidationPipe implements PipeTransform<any> {
   async transform(value: any, { metatype }: ArgumentMetadata) {
 
-    if (!metatype || this.toValidate(metatype)) return value;
+    if (!metatype || this.toValidate(metatype)) {
+      return value;
+    }
 
     const object = plainToClass(metatype, value);
     const errors = await validate(object);
 
-    if (errors.length > 0) throw new BadRequestException('Validation failed');
+    if (errors.length > 0) {
+      throw new BadRequestException('Validation failed');
+    }
 
     return value;
   }
