@@ -3,15 +3,15 @@ import { CatsService } from './cats.service'
 import { ICat } from './interfaces/cat.interface'
 import { CreateCatDto } from './dto/create-cat.dto'
 import { UpdateCatDto } from './dto/update-cat.dto'
-import { JoiValidationPipe } from 'src/pipes/validation.pipe'
-import { createCatSchema } from 'src/cats/schemas/joi.cats.schema'
+// import { JoiValidationPipe } from 'src/pipes/joi.validation.pipe'
+// import { createCatSchema } from 'src/cats/schemas/joi.cats.schema'
 
 @Controller('cats')
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
 
   @Post()
-  @UsePipes(new JoiValidationPipe(createCatSchema))
+  // @UsePipes(new JoiValidationPipe(createCatSchema))
   createCat(@Body() createCatDto: CreateCatDto) {
     return this.catsService.create(createCatDto);
   }
