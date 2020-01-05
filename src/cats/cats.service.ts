@@ -16,24 +16,20 @@ export class CatsService {
   ];
   private findCatById(id: string): ICat {
     const soughtForItem: ICat | undefined = this.cats.find(cat => cat.id === id);
-    
     if(soughtForItem === undefined) {
       throw new CustomException(`There are no item by id ${id}`)
     }
-    
     return soughtForItem
   }
   private removeCatById(id: string): void {
     this.cats.filter(cat => cat.id !== id);
   }
 
-
-
   findAll(): ICat[] {
     return this.cats
   }
 
-  findOne(id: string): ICat | string{
+  findOne(id: string): ICat {
     return this.findCatById(id)
   }
 
@@ -51,7 +47,6 @@ export class CatsService {
 
   delete(id: string): ICat {
     const soughtForCat = this.findCatById(id);
-
     this.removeCatById(id);
 
     return soughtForCat

@@ -20,7 +20,7 @@ export class AppController {
   @UseFilters(HttpExceptionFilter)
   // applaying filter by using a class (HttpExceptionFilter)
   // instead of an instance (new HttpExceptionFilter())
-  // is preferably, because it reduces memory usage (DI?)
+  // is preferably, because it reduces memory usage (and DI?)
   async testException() {
     throw new CustomException()
   }

@@ -21,7 +21,7 @@ export class CatsController {
   // @UsePipes(JoiValidationPipe(createCatSchema))
   @UseGuards(SomeGuard)
   @SetMetadata('meta', ['test-meta'])
-  createCat(@Body() createCatDto: CreateCatDto) {
+  createCat(@Body() createCatDto: CreateCatDto): ICat {
     return this.catsService.create(createCatDto);
   }
 
@@ -31,17 +31,17 @@ export class CatsController {
   }
 
   @Get(':id')
-  findOne(@Param() params): ICat | string {
-    return this.catsService.findOne(params.id);
+  findOne(@Param() {id}): ICat {
+    return this.catsService.findOne(id);
   }
 
   @Put(':id')
-  updateCat(@Body() updateCatDto: UpdateCatDto, @Param() params) {
-    return this.catsService.update(updateCatDto, params.id);
+  updateCat(@Body() updateCatDto: UpdateCatDto, @Param() {id}): ICat {
+    return this.catsService.update(updateCatDto, id);
   }
 
   @Delete(':id')
-  deleteCat(@Param() params) {
-    return this.catsService.delete(params.id);
+  deleteCat(@Param() {id}): ICat {
+    return this.catsService.delete(id);
   }
 }

@@ -18,7 +18,7 @@ import { CatsMiddleware } from './middlewares/cats.middleware'
 //     useClass: RolesGuard,
 //   },
 // ]
-// ...also and exception filters:
+// ...also exception filters:
 // providers: [
 //   {
 //     provide: APP_FILTER,
