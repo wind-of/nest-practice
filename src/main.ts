@@ -12,12 +12,16 @@ async function bootstrap() {
   // app.useGlobalPipes(PipeName);
 
 
+
   // If you want to register a filter globally 
   // app.useGlobalFilters(ExceptionFilterName);
 
-  // Another way to register a filter globally can be seen in the file app.module.ts
-  // The difference between these two methods is that
-  // in the first approach (see above), the filter cannot inject dependencies
+  // If you want to register a guard globally 
+  // app.useGlobalGuards(GuardName);
+
+  // If you use the method of registration of guards/filters shown above
+  // filters/guards cannot inject dependencies
+  // Another way to register a filter/guard globally can be seen in the app.module.ts file
 
   await app.listen(3000);
 }
