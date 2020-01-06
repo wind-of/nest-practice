@@ -13,22 +13,22 @@ import { CatsMiddleware } from './middlewares/cats.middleware'
 // you should set up the guard directly in 
 // any module using the following contruction:
 // providers: [
-//   {
+//   {                        ***Guards***
 //     provide: APP_GUARD,
 //     useClass: RolesGuard,
-//   },
-// ]
-// ...also exception filters:
-// providers: [
-//   {
+//   }, 
+//   {                        ***Exception filters***
 //     provide: APP_FILTER,
 //     useClass: HttpExceptionFilter,
 //   },
+//   {                        ***Inteceptors***
+//     provide: APP_INTERCEPTOR,
+//     useClass: LoggingInterceptor,
+//   }
 // ]
-
 // ...regardless of the module where 
 // you use this construction(s),
-// the guard/filter will be global
+// they (guards, filters, interceptors) will be global
 
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

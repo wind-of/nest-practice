@@ -13,13 +13,16 @@ async function bootstrap() {
 
 
 
+  // If you want to register an interceptor globally 
+  // app.useGlobalInterceptors(LoggingInterceptor);
+
   // If you want to register a filter globally 
   // app.useGlobalFilters(ExceptionFilterName);
 
   // If you want to register a guard globally 
   // app.useGlobalGuards(GuardName);
 
-  // If you use the method of registration of guards/filters shown above
+  // If you use the method of registration of guards/filters/interceptors shown above
   // filters/guards cannot inject dependencies
   // Another way to register a filter/guard globally can be seen in the app.module.ts file
 
