@@ -1,9 +1,10 @@
-import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes, ValidationPipe, UseGuards, SetMetadata } from '@nestjs/common'
+import { Controller, Get, Post, Param, Body, Put, Delete, UsePipes, ValidationPipe, UseGuards, SetMetadata, UseInterceptors } from '@nestjs/common'
 import { CatsService } from './cats.service'
 import { ICat } from './interfaces/cat.interface'
 import { CreateCatDto } from './dto/create-cat.dto'
 import { UpdateCatDto } from './dto/update-cat.dto'
 import { SomeGuard } from 'src/guards/some.guard'
+import { LoggingInterceptor } from 'src/interceptors/logging.interceptor'
 // import { JoiValidationPipe } from 'src/pipes/joi.validation.pipe'
 // import { createCatSchema } from 'src/cats/schemas/joi.cats.schema'
 
@@ -19,6 +20,7 @@ export class CatsController {
   
   @UsePipes(ValidationPipe)
   // @UsePipes(JoiValidationPipe(createCatSchema))
+  @UseInterceptors(LoggingInterceptor)
   @UseGuards(SomeGuard)
   @SetMetadata('meta', ['test-meta'])
   createCat(@Body() createCatDto: CreateCatDto): ICat {
