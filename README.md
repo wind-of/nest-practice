@@ -48,3 +48,18 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+
+
+# Progress
+
+## Sections 
+
+  1. ##### [~~Overview~~](https://docs.nestjs.com/first-steps) 
+  2. ##### [Fundamentals](https://docs.nestjs.com/fundamentals/custom-providers)
+  3. ##### Techniques
+  4. ##### GraphQL
+  5. ##### WebSockets
+  6. ##### Microservices
+  7. ##### Application Context
+  8. ##### Recipes
