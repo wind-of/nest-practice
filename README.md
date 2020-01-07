@@ -55,11 +55,11 @@ $ npm run test:cov
 
 ## Sections 
 
-  1. ##### [~~Overview~~](https://docs.nestjs.com/first-steps) 
-  2. ##### [Fundamentals](https://docs.nestjs.com/fundamentals/custom-providers)
-  3. ##### Techniques
-  4. ##### GraphQL
-  5. ##### WebSockets
-  6. ##### Microservices
-  7. ##### Application Context
-  8. ##### Recipes
+  ##### [~~Overview~~](https://docs.nestjs.com/first-steps) 
+  ##### [Fundamentals](https://docs.nestjs.com/fundamentals/custom-providers)
+  ##### Techniques
+  ##### GraphQL
+  ##### WebSockets
+  ##### Microservices
+  ##### Application Context
+  ##### Recipes
