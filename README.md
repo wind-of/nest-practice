@@ -19,7 +19,9 @@
 
 # Getting started
   ### There are several versions (branches) of the project
-  They are separated by the sections of the documentation. 
+  They are separated by the sections of the documentation. To get started, choose branch and follow these instructions below.
+
+
   
 ## Installation
 
