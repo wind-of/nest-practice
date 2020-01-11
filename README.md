@@ -18,13 +18,9 @@
 </p>
 
 # Getting started
-  ### There are several versions of the project
-  They are separated by the sections of the documentation. To get started, follow the instructions below.
-  ```bash 
-  $ cd section
-  ```
-
-
+  ### There are several versions (branches) of the project
+  They are separated by the sections of the documentation. 
+  
 ## Installation
 
 ```bash
