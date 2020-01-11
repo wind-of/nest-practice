@@ -17,6 +17,14 @@
   <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
 
+# Getting started
+  ### There are several versions of the project
+  They are separated by the sections of the documentation. To get started, follow the instructions below.
+  ```bash 
+  $ cd section
+  ```
+
+
 ## Installation
 
 ```bash
