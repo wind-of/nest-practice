@@ -21,6 +21,14 @@
   ### There are several versions (branches) of the project
   They are separated by the sections of the documentation. To get started, choose branch and follow these instructions below.
 
+## Cloning
+
+```bash
+$ git clone https://github.com/wind-of/nest-practice.git
+
+$ git switch <NameOfTheBranch>
+```
+  
 
   
 ## Installation
